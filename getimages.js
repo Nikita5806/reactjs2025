@@ -28,3 +28,12 @@ setData(response.data)
 }
 
 export default App
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color: #0c0101;
+  color:rgb(231, 210, 210) ;
+}

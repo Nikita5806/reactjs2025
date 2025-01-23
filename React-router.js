@@ -40,3 +40,57 @@ h1{
   color:#fff ;
 
 }
+
+
+import React from 'react'
+import {Routes, Route } from 'react-router-dom'
+import About from './pages/About'; 
+import Home from './pages/Home'; 
+import Product from './pages/Product'; 
+import Header from './components/header';
+
+const App = () => {
+  return (
+    
+    <div>
+
+<Header />
+       <Routes>
+        <Route path='/about' element= {<About/>}/>
+        <Route path ='/home' element={<Home/>}/>
+        <Route path ='/product' element={<Product/>}/>
+        
+       </Routes>
+    </div>
+  )
+}
+
+export default App
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const Header = () => {
+    
+  return (
+    <div className='py-7 px-10 bg-emerald-700 text-white flex items-center justify-between'>
+
+
+    <h2 className='text-2xl'>DeveloperME</h2>
+
+<div className='flex gap-10'>
+    
+<Link to='./about'>About</Link>
+<Link to='./home'>Home</Link>
+<Link to='./product'>Product</Link>
+</div>
+</div>
+
+
+    
+  )
+}
+
+export default Header
+
+
+
